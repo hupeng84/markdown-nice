@@ -1,5 +1,5 @@
 // 引入electron并创建一个Browserwindow
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -7,15 +7,18 @@ const url = require('url')
 let mainWindow
 
 function createWindow () {
-//创建浏览器窗口,宽高自定义具体大小你开心就好
-mainWindow = new BrowserWindow({width: 800, height: 600})
+  Menu.setApplicationMenu(null)
+  
+  //创建浏览器窗口,宽高自定义具体大小你开心就好
+  mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // 加载应用----react 打包
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, './build/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  // mainWindow.loadURL(url.format({
+  //   pathname: path.join(__dirname, './build/index.html'),
+  //   protocol: 'file:',
+  //   slashes: true
+  // }))
+  mainWindow.loadFile('./build/index.html')
   // 加载应用----适用于 react 开发时项目
   // mainWindow.loadURL('http://localhost:3000/');
   

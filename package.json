@@ -4,11 +4,11 @@
   "description": "a markdown editor with the function of style edition",
   "version": "1.8.22",
   "private": false,
-  "main": "lib/Lib.js",
-  "module": "lib/Lib.js",
-  "homepage": "https://www.mdnice.com",
+  "main": "main.js",
+  "module": "main.js",
+  "homepage": "./",
   "license": "GPL-3.0",
-  "typings": "./lib/index.d.ts",
+  "typings": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/mdnice/markdown-nice"
@@ -74,6 +74,7 @@
     "css-loader": "^2.1.1",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
+    "electron": "^22.1.0",
     "eslint": "^6.5.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
